@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zouk CC - Signals Protocol v0.6</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: #222;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    h1 { font-size: 1.8rem; border-bottom: 3px solid #0056b3; padding-bottom: 8px; color: #111; }
+    h2 { font-size: 1.3rem; color: #0056b3; margin-top: 35px; border-left: 4px solid #0056b3; padding-left: 10px; }
+    h3 { font-size: 1.1rem; margin-top: 20px; color: #333; }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+    .sample-box {
+      background: #282c34;
+      color: #abb2bf;
+      border-radius: 6px;
+      padding: 15px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+    .rule-item { margin-bottom: 12px; }
+    .rule-title { font-weight: bold; }
+    .en-text { color: #666; font-size: 0.9em; margin-bottom: 6px; }
+    .important { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; border-radius: 4px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>Zouk CC (Zouk Creative Commons)</h1>
+  <p><strong>Signals Protocol v0.6</strong></p>
+
+  <div class="card important">
+    <strong>【1. 共通ルール（全イベント共通・冒頭表示）】</strong><br>
+    ※どのイベントでも例外なく適用される絶対ルールです。
+    <ul>
+      <li><strong>リスペクト＆マナー：</strong>強引なリード/フォロー、同意のない不快な密着、過度な指導（ダメ出し）は禁止です。</li>
+      <li><strong>安全と自己管理：</strong>貴重品の紛失、怪我、個人間のトラブルは自己責任となります。</li>
+      <li><strong>迷惑行為の禁止：</strong>過度の泥酔、セクハラ、威圧的な言動を行った方は、主催者の判断で即時退場（返金なし）とします。</li>
+    </ul>
+  </div>
+
+  <h2>【2. イベント別・信号ルール（Signals）】</h2>
+  <p>※映画館の案内のようにパッと見て1秒でわかるショート表記です。</p>
+
+  <div class="card">
+    <h3>■ 予約（Reservation / Entry）</h3>
+    <div class="rule-item">
+      <div>🎟️🟢 <strong>予約不要：</strong>事前予約なしで直接お越しください。</div>
+      <div class="en-text">(No Booking Needed / Walk-ins Welcome)</div>
+      <div>🎟️🟡 <strong>事前予約推奨：</strong>事前予約で割引や特典あり！</div>
+      <div class="en-text">(Advance Booking Recommended)</div>
+      <div>🎟️🔴 <strong>完全事前予約制：</strong>事前予約がない方は入場できません。</div>
+      <div class="en-text">(Advance Booking Required)</div>
+    </div>
+
+    <h3>■ お支払い（Payment）</h3>
+    <div class="rule-item">
+      <div>💵🟢 <strong>現金のみ：</strong>現地通貨（日本円）の現金でお支払いください。</div>
+      <div class="en-text">(Local Cash Only)</div>
+      <div>📱🟡 <strong>国内決済可：</strong>現金＋国内電子決済（PayPay等）が使用可能です。</div>
+      <div class="en-text">(Local Cashless OK)</div>
+      <div>💳🟢 <strong>国際決済可：</strong>クレジットカードやPayPal等の国際決済が使用可能です。</div>
+      <div class="en-text">(International Payment OK)</div>
+    </div>
+
+    <h3>■ 飲食ルール（Drinks & Food）</h3>
+    <div class="rule-item">
+      <div>🍺🟢 <strong>持ち込み自由：</strong>飲食の持ち込み自由です。差し入れも歓迎！</div>
+      <div class="en-text">(Outside Food & Drinks OK)</div>
+      <div>🍺🟡 <strong>条件付き持ち込み：</strong>ソフトドリンクのみ可 / 一部制限あり。</div>
+      <div class="en-text">(Soft Drinks Only / Limited)</div>
+      <div>🍺🔴 <strong>持ち込み禁止：</strong>飲食物の持ち込み不可。会場にてご注文ください。</div>
+      <div class="en-text">(No Outside Food & Drinks)</div>
+    </div>
+
+    <h3>■ 靴・フロア（Shoes & Floor）</h3>
+    <div class="rule-item">
+      <div>👟🟢 <strong>土足OK：</strong>外履きのまま入場・ダンスが可能です。</div>
+      <div class="en-text">(Outdoor Shoes OK)</div>
+      <div>👟🔴 <strong>室内履き限定：</strong>土足厳禁。室内履き・ダンスシューズを持参してください（ヒールカバー必須）。</div>
+      <div class="en-text">(Indoor Shoes Only / Heel Covers Required)</div>
+      <div>👞🔴 <strong>靴厳禁：</strong>靴の使用不可。靴下または裸足のみとなります。</div>
+      <div class="en-text">(No Shoes / Socks or Barefoot)</div>
+    </div>
+
+    <h3>■ 写真・動画撮影（Photos & Videos）</h3>
+    <div class="rule-item">
+      <div>📸🟢 <strong>撮影・公開OK：</strong>イベントの様子は撮影・公開されます（参加＝同意）。</div>
+      <div class="en-text">(Public Photo & Video OK)</div>
+      <div>📸🟡 <strong>撮影あり（要受付申告）：</strong>映り込みNGの方は【受付時に】お申し出ください。</div>
+      <div class="en-text">(Photo & Video ON / Please Opt-Out at Entry)</div>
+      <div>📸🔴 <strong>全面撮影禁止：</strong>会場内での撮影・SNS公開は禁止です。</div>
+      <div class="en-text">(Strictly No Photography)</div>
+    </div>
+
+    <h3>■ 入退場（Re-entry）</h3>
+    <div class="rule-item">
+      <div>🚪🟢 <strong>再入場自由：</strong>途中の出入りが自由です。</div>
+      <div class="en-text">(Unlimited Re-Entry)</div>
+      <div>🚪🟡 <strong>受付声掛けで可：</strong>一時外出時は受付にお知らせください。</div>
+      <div class="en-text">(Re-Entry with Staff Notice)</div>
+      <div>🚪🔴 <strong>再入場不可：</strong>一度退場すると再入場できません。</div>
+      <div class="en-text">(No Re-Entry)</div>
+    </div>
+
+    <h3>■ 喫煙（Smoking）</h3>
+    <div class="rule-item">
+      <div>🚬🟢 <strong>フロア喫煙可：</strong>ダンスエリア内を含む会場内での喫煙が可能です。</div>
+      <div class="en-text">(Smoking Allowed on Dance Floor)</div>
+      <div>🚬🟡 <strong>フロア禁煙（指定場所あり）：</strong>ダンスエリアは禁煙。会場内の指定場所をご利用ください。</div>
+      <div class="en-text">(No Smoking on Floor / Designated Area Only)</div>
+      <div>🚬🔴 <strong>敷地内全面禁煙：</strong>会場内および建物敷地内は完全禁煙です。</div>
+      <div class="en-text">(Strictly No Smoking on Premises)</div>
+    </div>
+  </div>
+
+  <h2>【3. 地域別ローカルガイド：日本ルール（Local Context: Japan Standard）】</h2>
+  <div class="card">
+    <p>海外と日本では、会場のルールや法律の前提が異なる場合があります。快適に過ごすためのガイドラインです。</p>
+    <ul>
+      <li><strong>🍺 飲食持ち込みについて（Venue & Drink Culture）</strong><br>日本のクラブやバー等の飲食店は、ドリンク代で成り立っています。事前許可のない持ち込みは厳しく禁止されておりますので、会場のバーカウンターをご利用ください。</li>
+      <li><strong>🚬 路上喫煙の禁止について（Street Smoking Ban）</strong><br>東京都心部をはじめとする日本の多くの自治体では、条例により「指定喫煙所に限る路上喫煙」が義務付けられ違反は罰金の対象となります。イベント会場の建物外や路上での喫煙は固くお断りいたします。</li>
+      <li><strong>👟 室内履きマナーについて（Indoor Shoe Rules）</strong><br>日本のダンススタジオは床の保護と清潔さを最優先しています。「土足厳禁」の表記がある場所では、外で履いた靴での入場は一切できません。</li>
+    </ul>
+  </div>
+
+  <h2>【4. SNS・イベントページ記載用の案内テキスト案】</h2>
+
+  <div class="card">
+    <h3>■ 日本語案内文（Facebook概要欄・インスタ等）</h3>
+    <div class="sample-box">当イベントは「Zouk CC（共通ルール）」を導入しています。
+今回のハウスルール：🎟️🟡 💳🟢 🍺🔴 👟🔴 📸🟡 🚪🟢 🚬🟡
+
+※各絵文字の意味や、詳細な共通利用規約（免責事項・日本でのローカルルール等）については、以下の公式Webページを必ずご確認ください。イベント参加をもって規約に同意したものとみなします。
+https://zouk-cc.github.io/</div>
+
+    <h3 style="margin-top:20px;">■ English Summary (for International Dancers)</h3>
+    <div class="sample-box">This event follows the "Zouk CC Guidelines".
+Today's House Rules: 🎟️🟡 💳🟢 🍺🔴 👟🔴 📸🟡 🚪🟢 🚬🟡
+
+For details on these emoji codes, common safety rules, and local etiquette in Japan (smoking/drink rules), please check our official link below:
+https://zouk-cc.github.io/</div>
+  </div>
+
+</body>
+</html>
